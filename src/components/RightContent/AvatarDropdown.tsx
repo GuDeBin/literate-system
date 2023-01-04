@@ -5,7 +5,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { useEmotionCss } from '@ant-design/use-emotion-css';
-import { history, Outlet, useModel } from '@umijs/max';
+import { history, useModel } from '@umijs/max';
 import { Avatar, Spin } from 'antd';
 import { setAlpha } from '@ant-design/pro-components';
 import { stringify } from 'querystring';
