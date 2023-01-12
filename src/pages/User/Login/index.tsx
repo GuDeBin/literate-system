@@ -157,5 +157,33 @@ const Login: React.FC = () => {
   };
   const { status, type: loginType } = userLoginState;
 
-  return <div className={containerClassName}></div>;
+  return (
+    <div className={containerClassName}>
+    <Helmet>
+      <title>
+        {intl.formatMessage({
+          id: 'menu.login',
+          defaultMessage: '登录页',
+        })}
+        - {Settings.title}
+      </title>
+    </Helmet>
+    <Lang/>
+    <div
+    style={{
+      flex:'1',
+      padding:'32px 0'
+    }}>
+      <LoginForm
+      contentStyle={{
+        minWidth:280,
+        maxWidth:'75vw'
+      }}
+      logo={<img alt='logo' src='/logo.svg'/>}
+      title='Ant Design'
+      subTitle={intl.formatMessage({id: 'pages.layouts.userLayout.title'})}
+      
+    </div>
+  </div>
+  );
 };
